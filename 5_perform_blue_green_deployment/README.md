@@ -46,6 +46,7 @@
     events-web-5f66656cc4-pbqvv       1/1     Running     0          5m52s<br>
     events-web-5f66656cc4-r9hvp       1/1     Running     0          86m<br>
     prashant-mariadb-server-0         1/1     Running     0          3h13m
+  - Verify the cluster state by visiting various sections in AWS Console [pa-cap-eks-cluster](https://us-east-2.console.aws.amazon.com/eks/clusters/pa-cap-eks-cluster?region=us-east-2).
 - #### The Load Balancer is pointing to application version 1.0, switch it to version 2.0:
   - Update the selector from "ver: v1.0" to "ver: v2.0" in web-service.yaml and apply the changes using the command **kubectl apply -f web-service.yaml**.
   - Execute the command **kubectl get svc** to verify the services.
