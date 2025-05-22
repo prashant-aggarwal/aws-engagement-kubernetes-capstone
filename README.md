@@ -1,4 +1,6 @@
-# AWS Kubernetes Capstone Project
+<p align="center">
+  # AWS Kubernetes Capstone Project
+</p>
 Demonstrate your knowledge by successfully completing the following use case scenarios. 
 
 1. #### Create and configure the deployment environment:
