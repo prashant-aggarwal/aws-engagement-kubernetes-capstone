@@ -50,7 +50,7 @@
   - Update the selector from "ver: v1.0" to "ver: v2.0" in web-service.yaml and apply the changes using the command **kubectl apply -f web-service.yaml**.
   - Execute the command **kubectl get svc** to verify the services.
   - Relaunch the application and verify that it is pointing to the version 2.0 as well as displaying all the relevant records.
-- #### The Load Balancer is pointing to application version 2.0, roll it back to version 1.0:
+- #### The Load Balancer is pointing to application version 2.0, switch it back to version 1.0:
   - Update the selector from "ver: v2.0" to "ver: v1.0" in web-service.yaml and apply the changes using the command **kubectl apply -f web-service.yaml**.
   - Execute the command **kubectl get svc** to verify the services.
   - Relaunch the application and verify that it is pointing to the version 1.0 as well as displaying all the relevant records.
