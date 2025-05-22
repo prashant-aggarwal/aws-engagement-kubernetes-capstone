@@ -39,6 +39,8 @@
   - Type **docker** then press RETURN for verification of the installation: Sample output:<br>
     Run 'docker COMMAND --help' for more information on a command.<br><br>
     For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+  - Use **sudo systemctl enable docker** to start service on boot.
+  - Use **sudo systemctl start docker** to start the service.
 - #### Install GIT:
   - Use command **sudo yum install git**.
   - Type **git** then press RETURN for verification of the installation: Sample output:<br>
