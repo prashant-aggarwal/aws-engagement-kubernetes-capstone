@@ -1,6 +1,6 @@
 ## Deploy a 3-tier web application including the backend database
 - #### Install database MariaDB on the cluster with the help of Helm charts:
-  - Change the directory to backend using command **cd ./aws-engagement-kubernetes-capstone/4_deploy_web_application/sample-application/backend/**.
+  - Change the directory to backend using command **cd ./aws-engagement-kubernetes-capstone/4_deploy_web_application/backend/**.
   - Execute the following commands:<br>
     curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3<br>
     chmod 700 get_helm.sh<br>
