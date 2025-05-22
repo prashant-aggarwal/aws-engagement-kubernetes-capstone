@@ -1,4 +1,4 @@
-## Perform a cleanup of the resources that have been deployed from the previous steps:
+## Perform a cleanup of the resources that have been deployed from the previous steps
    - Execute the **eksctl delete cluster pa-cap-eks-cluster --region us-east-2** command to cleanup resources:
    - This may take a while to complete. Sample output after completion:<br>
      will delete stack "eksctl-pa-cap-eks-cluster-addon-vpc-cni"<br>
