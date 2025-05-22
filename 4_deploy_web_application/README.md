@@ -42,7 +42,7 @@
     Table created<br>
     Records added<br>
     6:07:08 PM<br>
-    Exiting<br>
+    Exiting
 - #### Install the backend API:
   - Execute the following commands to install a service of type ClusterIP listening on port 8082 and a deployment with replicaset:<br>
     kubectl apply -f api-service.yaml<br>
