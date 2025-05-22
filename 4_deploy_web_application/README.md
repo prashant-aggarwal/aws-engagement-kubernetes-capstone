@@ -71,7 +71,7 @@
     kubernetes                         ClusterIP      10.100.0.1       <none>                                                                    443/TCP        5h22m<br>
     prashant-mariadb-server            ClusterIP      10.100.140.121   <none>                                                                    3306/TCP       19m<br>
     prashant-mariadb-server-headless   ClusterIP      None             <none>                                                                    3306/TCP       19m
-  - Launch the application by prefixing **http://** with the **EXTERNAL-IP** value of events-web-svc e.g. http://a97543b4264c64732affe918fe3df302-1411613217.us-east-2.elb.amazonaws.com/. It should display two records.
+  - Launch the application by prefixing **http://** with the **EXTERNAL-IP** value of events-web-svc e.g. http://a326647395a7846df8f6a20a3901a434-2130778590.us-east-2.elb.amazonaws.com/. It should display two records.
   - Add one or more records using **Add an event** button followed by **submit**.
   - Relaunch the application and verify that it is displaying all the relevant records.
 - #### Verify that the application is able to scale automatically and able to maintain the state:
