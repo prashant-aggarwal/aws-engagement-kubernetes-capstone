@@ -52,6 +52,7 @@
     db-initializer-8cgzk          0/1     Completed   0          29m<br>
     events-api-85bbfdbbc6-jfxmg   1/1     Running     0          8s<br>
     prashant-mariadb-server-0     1/1     Running     0          118m
+  - Verify the cluster state by visiting various sections in AWS Console [pa-cap-eks-cluster](https://us-east-2.console.aws.amazon.com/eks/clusters/pa-cap-eks-cluster?region=us-east-2).
 - #### Install the website:
   - Change the directory to frontend using command **cd ../frontend/**.
   - Execute the following commands to install a service of type LoadBalancer listening on port 8080 and a deployment with replicaset:<br>
@@ -63,6 +64,7 @@
     events-api-85bbfdbbc6-jfxmg   1/1     Running     0          8s<br>
     events-web-5f66656cc4-r9hvp   1/1     Running     0          11m<br>
     prashant-mariadb-server-0     1/1     Running     0          118m
+  - Verify the cluster state by visiting various sections in AWS Console [pa-cap-eks-cluster](https://us-east-2.console.aws.amazon.com/eks/clusters/pa-cap-eks-cluster?region=us-east-2).
 - #### Verify that the application is running and able to maintain the state:
   - Execute the command **kubectl get svc** to view the various services which are running. Sample output:<br>
     NAME                               TYPE           CLUSTER-IP       EXTERNAL-IP                                                               PORT(S)        AGE<br>
@@ -74,6 +76,7 @@
   - Launch the application by prefixing **http://** with the **EXTERNAL-IP** value of events-web-svc e.g. http://a326647395a7846df8f6a20a3901a434-2130778590.us-east-2.elb.amazonaws.com/. It should display two records.
   - Add one or more records using **Add an event** button followed by **submit**.
   - Relaunch the application and verify that it is displaying all the relevant records.
+  - Verify the cluster state by visiting various sections in AWS Console [pa-cap-eks-cluster](https://us-east-2.console.aws.amazon.com/eks/clusters/pa-cap-eks-cluster?region=us-east-2).
 - #### Verify that the application is able to scale automatically and able to maintain the state:
   - Change the value of relica attribute to 3 in both web-deployment.yaml and api-deployment.yaml files.
   - Execute the following commands to apply the changes:<br>
@@ -101,4 +104,5 @@
     events-web-5f66656cc4-xrfrj   1/1     Running       0          24m<br>
     prashant-mariadb-server-0     1/1     Running       0          25m
   - Relaunch the application and verify that it is displaying all the relevant records.
+  - Verify the cluster state by visiting various sections in AWS Console [pa-cap-eks-cluster](https://us-east-2.console.aws.amazon.com/eks/clusters/pa-cap-eks-cluster?region=us-east-2).
   
