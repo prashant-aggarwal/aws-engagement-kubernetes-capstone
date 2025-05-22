@@ -1,5 +1,5 @@
 <h1 align="center">AWS Kubernetes Capstone Project</h1><br>
-Demonstrate the knowledge by successfully completing the following use case scenarios. 
+Demonstrate the knowledge by successfully completing the following use case scenarios. Clone this repository using command **git clone https://github.com/prashant-aggarwal/aws-engagement-kubernetes-capstone.git** and follow the instructions provided below:
 
 1. #### Create and configure the deployment environment:
    - Deploy an environment to use tools such as Docker, Kubernetes, EKSCTL, and any tools required to test your application.
