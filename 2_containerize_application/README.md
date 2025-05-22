@@ -1,4 +1,4 @@
-## Containerize the application and store it in a repository:
+![image](https://github.com/user-attachments/assets/68fbe699-f9b4-43b7-8a34-293b48e4be29)## Containerize the application and store it in a repository:
 - #### Run an application as a container in Docker:
   - Create directory eventsapp using **mkdir -p prashant/aws-engagement-kubernetes-capstone/2_containerize_application/eventsapp/** command.
   - Change the directory using **cd eventsapp** command.
@@ -29,7 +29,21 @@
   docker run -d -p 8082:8082 events-api:v1.0<br>
   docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" events-website:v1.0
   - Test the application is working using http://ec2-3-84-204-165.compute-1.amazonaws.com:8080/.
-    
-- #### Configure an image repository to store and retrieve images:
-- #### Test the container registry in order to deploy, store, and retrieve images.
-- #### Store multiple versions of the same image in the image repository.
+- #### Configure an image repository to store and retrieve images in AWS Elastic Container Registry (ECR):
+  - Create private repositories as [events-api](https://us-east-1.console.aws.amazon.com/ecr/repositories/private/021668988309/events-api?region=us-east-1) and [events-website](https://us-east-1.console.aws.amazon.com/ecr/repositories/private/021668988309/events-website?region=us-east-1).
+  - Use the following commands to login to ECR and push the images to their respective repositories. Replace events-api with events-website for pushing website image:<br>
+  docker login -u AWS -p $(aws ecr get-login-password --region us-east-1) 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-api<br>
+  docker build -t events-api .<br>
+  docker tag events-api:latest 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-api<br>
+  docker push 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-api:latest
+- #### Run the containers using image from container registry:
+  - Stop the previous containers using **docker rm <container_id>** command. container_id can be identified using **docker ps -a** command.
+  - Run both the applications locally in Docker containers using the following commands:<br>
+  docker run -d -p 8082:8082 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-api:latest<br>
+  docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-website:latest
+- #### Store multiple versions of the same image in the image repository:
+  - Edit the file ~/eventsapp/events-website/views/layouts/default.hbs for changing the text.
+  - Build the image and push it to [events-website](https://us-east-1.console.aws.amazon.com/ecr/repositories/private/021668988309/events-website?region=us-east-1) using the following commands:<br>
+  docker build -t events-website .<br>
+  docker tag events-website:latest 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-website<br>
+  docker push 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-website:v2.0
