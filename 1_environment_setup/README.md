@@ -28,7 +28,7 @@
     curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"<br>
     tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz<br>
     sudo mv /tmp/eksctl /usr/local/bin<br>
-  - Type **eksctl** then press RETURN for verification of the installation: Sample output:<br><br>
+  - Type **eksctl** then press RETURN for verification of the installation: Sample output:<br>
     Usage: eksctl [command] [flags]<br><br>
     Commands:<br>
        eksctl anywhere                        EKS anywhere<br>
