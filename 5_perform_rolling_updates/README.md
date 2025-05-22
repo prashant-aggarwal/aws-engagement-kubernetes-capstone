@@ -1,6 +1,6 @@
 #### Update your application with a blue/green deployment
 - ## Create two deployments for web application:
-  - Continue from the previous step of scaling the application. Change the directory to backend using command **cd ./aws-engagement-kubernetes-capstone/4_deploy_web_application/frontend/**.
+  - Continue from the previous step of scaling the web application. Change the directory to frontend using command **cd ./aws-engagement-kubernetes-capstone/4_deploy_web_application/frontend/**.
   - The web application is currently running on version 1.0. Create a copy of web-deployment.yaml file using the command **cp web-deployment.yaml web-deployment-v2.yaml**.
   - Edit the new web-deployment-v2.yaml file and modify the following attributes:<br>
     "name: events-web" to "name: events-web-v2.0"<br>
