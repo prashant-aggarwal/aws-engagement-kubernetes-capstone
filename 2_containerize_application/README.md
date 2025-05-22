@@ -1,7 +1,6 @@
 ## Containerize the application and store it in an image repository:
 - #### Run an application as a container in Docker:
-  - Create directory eventsapp using **mkdir -p prashant/aws-engagement-kubernetes-capstone/2_containerize_application/eventsapp/** command.
-  - Change the directory using **cd eventsapp** command.
+  - Change the directory using **cd 2_containerize_application** command.
   - Pull the Git repository containing test application using the following commands:<br>
     git init<br>
     git pull https://github.com/msutton150/eventsappstart.git<br>
@@ -11,7 +10,7 @@
     npm install<br>
     node server.js
   - Open another session for the EC2 instance for running web application using the following commands:<br>
-    cd ~/eventsapp/events-website/<br>
+    cd ~/events-website/<br>
     npm install<br>
     npm start
   - Update the security group [sg-0248a255eda00ccbc - launch-wizard-3](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#SecurityGroup:securityGroupId=sg-0248a255eda00ccbc) attached to the EC2 instance to allow traffic for ports 8080 and 8082 by creating inbound rules.
@@ -42,7 +41,7 @@
   docker run -d -p 8082:8082 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-api:latest<br>
   docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-website:latest
 - #### Store multiple versions of the same image in the image repository:
-  - Edit the file ~/eventsapp/events-website/views/layouts/default.hbs for changing the text.
+  - Edit the file ~/events-website/views/layouts/default.hbs for changing the text.
   - Build the image and push it to [events-website](https://us-east-1.console.aws.amazon.com/ecr/repositories/private/021668988309/events-website?region=us-east-1) using the following commands:<br>
   docker build -t events-website .<br>
   docker tag events-website:latest 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-website<br>
