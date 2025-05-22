@@ -18,6 +18,18 @@
   - Copy the public DNS name of the EC2 server, paste in a browser, and append :8080 to the address to test the application for e.g. http://ec2-3-84-204-165.compute-1.amazonaws.com:8080/.
   - Stop the services by pressing CTRL+C in both the sessions.
 - #### Create Docker images for the application:
+  - Create separate Dockerfile files in both the events-api and events-website folders with relevant instructions.
+  - Run the command **docker build . -t events-api:v1.0** in the events-api folder for creation of Docker image for events-api.
+  - Run the command **docker build . -t events-website:v1.0** in the events-website folder for creation of Docker image for events-website.
+  - Run the command **docker images** to view the Docker images created above. Sample output:<br>
+    REPOSITORY                                                    TAG       IMAGE ID       CREATED         SIZE<br>
+    events-website                                                v1.0      29dca6e718d5   5 seconds ago   264MB<br>
+    events-api                                                    v1.0      05ce7fa7a8d5   2 minutes ago   255MB
+  - Run both the applications locally in Docker containers using the following commands:<br>
+  docker run -d -p 8082:8082 events-api:v1.0<br>
+  docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" events-website:v1.0
+  - Test the application is working using http://ec2-3-84-204-165.compute-1.amazonaws.com:8080/.
+    
 - #### Configure an image repository to store and retrieve images:
 - #### Test the container registry in order to deploy, store, and retrieve images.
 - #### Store multiple versions of the same image in the image repository.
