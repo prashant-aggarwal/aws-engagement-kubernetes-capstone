@@ -1,4 +1,4 @@
-## Containerize the application and store it in a repository:
+## Containerize the application and store it in an image repository:
 - #### Run an application as a container in Docker:
   - Create directory eventsapp using **mkdir -p prashant/aws-engagement-kubernetes-capstone/2_containerize_application/eventsapp/** command.
   - Change the directory using **cd eventsapp** command.
