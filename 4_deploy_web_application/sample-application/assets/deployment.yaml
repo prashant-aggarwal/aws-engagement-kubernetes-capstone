@@ -52,7 +52,7 @@ spec:
               drop:
               - ALL
             readOnlyRootFilesystem: false
-          image: "retail-store-sample-assets"
+          image: "public.ecr.aws/aws-containers/retail-store-sample-assets:0.1.0"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
