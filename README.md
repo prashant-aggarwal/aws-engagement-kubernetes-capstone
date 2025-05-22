@@ -3,7 +3,7 @@ Demonstrate your knowledge by successfully completing the following use case sce
 
 1. #### Create and configure the deployment environment:
    - Deploy an environment to use tools such as Docker, Kubernetes, EKSCTL, and any tools required to test your application.
-   - Refer the README.md file for details.
+   - Refer [README](https://github.com/prashant-aggarwal/aws-engagement-kubernetes-capstone/blob/main/1_environment_setup/README.md) for details.
 2. #### Containerize the application and store it in a repository:
    - Create Docker images for the application used for the project.
    - Configure an image repository to store and retrieve images in either Dockerhub or ECR.
