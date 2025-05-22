@@ -47,3 +47,4 @@
   docker build -t events-website .<br>
   docker tag events-website:latest 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-website<br>
   docker push 021668988309.dkr.ecr.us-east-1.amazonaws.com/events-website:v2.0
+  - Similarly, other image repository stores like Docker Hub [events-api](https://hub.docker.com/repository/docker/coolduck84/events-api/general) and [events-website](https://hub.docker.com/repository/docker/coolduck84/events-website/general)  can also be used.
