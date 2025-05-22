@@ -1,6 +1,4 @@
-<p align="center">
-  <h1 align="center">AWS Kubernetes Capstone Project</h1>
-</p>
+<h1 align="center">AWS Kubernetes Capstone Project</h1><br>
 Demonstrate your knowledge by successfully completing the following use case scenarios. 
 
 1. #### Create and configure the deployment environment:
