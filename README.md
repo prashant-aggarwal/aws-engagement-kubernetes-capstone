@@ -1,5 +1,5 @@
 <p align="center">
-  # AWS Kubernetes Capstone Project
+  <h1>AWS Kubernetes Capstone Project</h1>
 </p>
 Demonstrate your knowledge by successfully completing the following use case scenarios. 
 
