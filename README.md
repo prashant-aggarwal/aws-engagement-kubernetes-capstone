@@ -21,3 +21,5 @@ Demonstrate the knowledge by successfully completing the following use cases. Cl
 5. #### Update your application with a blue/green deployment:
    - Configure the application to be updated via blue/green deployment.
    - Refer to these [instructions](https://github.com/prashant-aggarwal/aws-engagement-kubernetes-capstone/blob/main/5_perform_blue_green_deployment/README.md).
+6. #### Cleanup the environment:
+   - Refer to these [instructions](https://github.com/prashant-aggarwal/aws-engagement-kubernetes-capstone/edit/main/6_cleanup_environment/README.md)
