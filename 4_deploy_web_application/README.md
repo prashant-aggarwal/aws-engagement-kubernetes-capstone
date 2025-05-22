@@ -76,7 +76,9 @@
   - Relaunch the application and verify that it is displaying all the relevant records.
 - #### Verify that the application is able to scale automatically and able to maintain the state:
   - Change the value of relica attribute to 3 in both web-deployment.yaml and api-deployment.yaml files.
-  - Execute the command **kubectl apply -f web-service.yaml** to apply the changes:
+  - Execute the following commands to apply the changes:<br>
+    kubectl apply -f app-deployment.yaml<br>
+    kubectl apply -f web-deployment.yaml
   - Execute the command **kubectl get pods** to verify that the pods are getting added to maintain the desired count. Sample output:<br>
     NAME                          READY   STATUS    RESTARTS   AGE<br>
     events-api-85bbfdbbc6-jfxmg   1/1     Running   0          35m<br>
@@ -88,7 +90,9 @@
     prashant-mariadb-server-0     1/1     Running   0          35m
   - Relaunch the application and verify that it is displaying all the relevant records.
   - Change the value of relica attribute to 1 in both web-deployment.yaml and api-deployment.yaml files.
-  - Execute the command **kubectl apply -f web-service.yaml** to apply the changes:
+  - Execute the following commands to apply the changes:<br>
+    kubectl apply -f app-deployment.yaml<br>
+    kubectl apply -f web-deployment.yaml
   - Execute the command **kubectl get pods** to verify that the pods are getting terminated to maintain the desired count. Sample output:<br>
     NAME                          READY   STATUS        RESTARTS   AGE<br>
     events-api-85bbfdbbc6-2rzpx   1/1     Terminating   0          38m<br>
