@@ -1,5 +1,5 @@
-#### Update your application with a blue/green deployment
-- ## Create two deployments for web application:
+## Update your application with a blue/green deployment
+- #### Create two deployments for web application:
   - Continue from the previous step of scaling the web application. Change the directory to frontend using command **cd ./aws-engagement-kubernetes-capstone/4_deploy_web_application/frontend/**.
   - The web application is currently running on version 1.0. Create a copy of web-deployment.yaml file using the command **cp web-deployment.yaml web-deployment-v2.yaml**.
   - Edit the new web-deployment-v2.yaml file and modify the following attributes:<br>
@@ -46,11 +46,11 @@
     events-web-5f66656cc4-pbqvv       1/1     Running     0          5m52s<br>
     events-web-5f66656cc4-r9hvp       1/1     Running     0          86m<br>
     prashant-mariadb-server-0         1/1     Running     0          3h13m
-- ## The Load Balancer is pointing to application version 1.0, switch it to version 2.0:
+- #### The Load Balancer is pointing to application version 1.0, switch it to version 2.0:
   - Update the selector from "ver: v1.0" to "ver: v2.0" in web-service.yaml and apply the changes using the command **kubectl apply -f web-service.yaml**.
   - Execute the command **kubectl get svc** to verify the services.
   - Relaunch the application and verify that it is pointing to the version 2.0 as well as displaying all the relevant records.
-- ## The Load Balancer is pointing to application version 2.0, roll it back to version 1.0:
+- #### The Load Balancer is pointing to application version 2.0, roll it back to version 1.0:
   - Update the selector from "ver: v2.0" to "ver: v1.0" in web-service.yaml and apply the changes using the command **kubectl apply -f web-service.yaml**.
   - Execute the command **kubectl get svc** to verify the services.
   - Relaunch the application and verify that it is pointing to the version 1.0 as well as displaying all the relevant records.
