@@ -20,4 +20,4 @@ Demonstrate the knowledge by successfully completing the following use case scen
    - Refer to these [instructions](https://github.com/prashant-aggarwal/aws-engagement-kubernetes-capstone/blob/main/4_deploy_web_application/README.md).
 5. #### Update your application with a blue/green deployment:
    - Configure the application to be updated via blue/green deployment.
-   - Refer to these [instructions](https://github.com/prashant-aggarwal/aws-engagement-kubernetes-capstone/blob/main/5_perform_rolling_updates/README.md).
+   - Refer to these [instructions](https://github.com/prashant-aggarwal/aws-engagement-kubernetes-capstone/blob/main/5_perform_blue_green_deployment/README.md).
